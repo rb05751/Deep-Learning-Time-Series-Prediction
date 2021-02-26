@@ -8,10 +8,10 @@ The data used for training the model was sourced from the AlphaVantage API. A py
 # Model Architecture
 The model was built using the Tf.Keras API in an object-oriented manner. The layers are built as follows:
 
-Input = Tensor of Shape [batch size, sequence length, feature_dim] sequence length (window_size) being 10 and feature dim being 4 consisting of price and 3 MACD signals.
-Layer1 = Convolutional1D
-Layer2-4 = LSTM
-Layer5-6 = Dense with final layer being a regression output
+Input = Tensor of Shape [batch size, sequence length, feature_dim] sequence length (window_size) being 10 and feature dim being 4 consisting of price and 3 MACD signals. <br>
+Layer1 = Convolutional1D <br>
+Layer2-4 = LSTMs <br>
+Layer5-6 = Dense with final layer being a regression output <br>
 
 # Purchasing Instructions Algorithm / Backtesting
 There is a plot of how tightly the model fit to the entire dataset including the last ~1000 days. However, the performance of the model in the trading algorithm portion has high variance. When I first tested this model it achieved an average CAGR of 39% on 13 randomly selected stocks, which was roughly 60 days ago. I tested it a few days ago and it is barely clearing 5%. This shows how much an algorithm can change in a short amount of time. There will need to be more analysis done on the algorithm to determine its overall performance and a means of improving it.
